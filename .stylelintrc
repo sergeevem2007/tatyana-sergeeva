@@ -1,0 +1,28 @@
+{
+	"extends": [
+		"stylelint-config-twbs-bootstrap",
+		"stylelint-config-clean-order",
+		"stylelint-config-rational-order"
+	],
+	"plugins": ["stylelint-scss"],
+	"ignoreFiles": ["**/*.min.css"],
+	"rules": {
+		"at-rule-empty-line-before": ["always", { "except": ["after-same-name"], "ignore": ["after-comment"] }],
+		"at-rule-no-unknown": null,
+		"declaration-block-no-redundant-longhand-properties": [true, { "ignoreShorthands": ["inset"] }],
+		"declaration-no-important": null,
+		"font-family-name-quotes": "always-unless-keyword",
+		"no-descending-specificity": null,
+		"property-no-vendor-prefix": null,
+		"rule-empty-line-before": "always",
+		"scss/at-rule-no-unknown": true,
+		"scss/at-else-empty-line-before": null,
+		"scss/at-mixin-parentheses-space-before": null,
+		"scss/no-global-function-names": null,
+		"selector-class-pattern": null,
+		"selector-id-pattern": null,
+		"selector-max-id": 2,
+		"selector-no-qualifying-type": [true, { "ignore": ["attribute", "class", "id"] }],
+		"stylistic/indentation": "tab"
+	}
+}

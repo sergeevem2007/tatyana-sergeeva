@@ -1,0 +1,8 @@
+/node_modules
+/.yarn
+/.idea
+/dist
+deploy.json
++.js
++.css
++.scss

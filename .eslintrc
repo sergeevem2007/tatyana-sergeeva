@@ -1,0 +1,39 @@
+{
+	"root": true,
+	"env": { "browser": true, "es2021": true, "node": true },
+	"extends": [
+		"eslint:recommended",
+		"plugin:@typescript-eslint/recommended",
+		"prettier"
+	],
+	"parser":  "@typescript-eslint/typescript-estree",
+	"ignorePatterns": ["dist/**/*", "src/data/**/*", "node_modules/**/*"],
+	"parserOptions": {
+		"ecmaVersion": "latest",
+		"sourceType": "module"
+	},
+	"rules": {
+		"object-curly-spacing": ["error", "always"],
+		"semi": ["error", "always"],
+		"quotes": ["error", "single", { "avoidEscape": true, "allowTemplateLiterals": true }],
+		"indent": ["error", "tab", { "ObjectExpression": 1 }],
+		"camelcase": 0,
+		"class-methods-use-this": 0,
+		"consistent-return": 0,
+		"func-names": ["error", "never"],
+		"import/no-extraneous-dependencies": 0,
+		"max-len": ["error", { "code": 900 }],
+		"no-alert": "off",
+		"no-console": "off",
+		"no-continue": 0,
+		"no-multi-assign": ["error", { "ignoreNonDeclaration": true }],
+		"no-new": 0,
+		"no-param-reassign": ["error", { "props": false }],
+		"no-plusplus": 0,
+		"no-return-assign": 0,
+		"no-tabs": 0,
+		"no-underscore-dangle": 0,
+		"no-unused-vars": 0,
+		"prefer-destructuring": ["error", { "object": true, "array": false }]
+	}
+}
