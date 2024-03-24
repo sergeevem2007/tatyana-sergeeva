@@ -1,0 +1,36 @@
+<section class="reason pb-10">
+	<div class="container">
+		<div class="row ">
+			<div class="col-8 offset-2">
+				<div class="d-flex flex-column align-items-center">
+					<div class="main__author">
+						<img src="/src/assets/img/design-bg.png" alt="" class="img-fluid">
+					</div>
+				</div>
+			</div>
+			<div class="col-md-8 offset-2">
+				<div class="reason__offer bg-white px-45 py-45 shadow-sm">
+					<h2 class="fs-24 fs-lg-48 mb-4">Почему самостоятельно не&nbsp;получается решить свои проблемы?</h2>
+					<p class="fs-16 fs-lg-20 mb-45">Невозможно самой понять как прошлый опыт и травмы повлияли на текущие мысли, эмоции, поведение</p>
+					<div class="d-flex flex-column align-items-center gap-4">
+						<a href="" class="btn btn-outline-secondary fw-700 text-primary text-uppercase rounded-pill px-5 py-3">Узнать больше</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row mt-6">
+			<div class="col-12">
+				<h3 class="fs-20 fs-lg-32 text-center mb-4">Скорее всего ты:</h3>
+			</div>
+		</div>
+		<div class="row gx-lg-6 gy-4">
+			{% for reason in site.reason %}
+				<div class="col-md-4">
+					<div class="reason__card p-4 h-100 rounded-4 shadow-sm">
+						<p class="fs-16 fs-lg-20">{{ reason }}</p>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

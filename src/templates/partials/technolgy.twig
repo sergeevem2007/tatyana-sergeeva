@@ -1,0 +1,25 @@
+<section class="technology pb-10">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="fs-24 fs-lg-48 text-secondary mb-6">Проверенная технология <br> из 6 консультаций, на которых ты:</h2>
+			</div>
+		</div>
+		<div class="row gx-lg-5 gy-4">
+			{% for tech in site.technology %}
+				<div class="col-4">
+					<div class="technology__card d-flex flex-column justify-content-stretch p-4 rounded-4 shadow h-100">
+						<div class="technology__icon">
+							<img src="{{ tech.img }}" alt="" width="40">
+						</div>
+						<p class="fs-16 fs-lg-20 mb-45">{{ tech.desc }}</p>
+
+						<div class="d-flex justify-content-center mt-auto">
+							<a href="" class="btn btn-outline-secondary fw-700 text-primary text-uppercase rounded-pill px-5 py-3">Пример</a>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

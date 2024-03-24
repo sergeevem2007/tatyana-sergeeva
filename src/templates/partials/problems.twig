@@ -1,0 +1,19 @@
+<section class="problems py-10">
+	<div class="container">
+		<div class="row mb-6">
+			<div class="col-12">
+				<h2 class="fs-24 fs-lg-48">С какими проблемами обычно ко мне обращаются</h2>
+			</div>
+		</div>
+		<div class="row gx-lg-8 gy-3">
+			{% for problem in site.problems %}
+				<div class="col-12 col-md-6">
+					<div class="d-flex align-items-start">
+						<div class="problems__dot"></div>
+						<p class="fs-16 fs-lg-20">{{ problem }}</p>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</section>

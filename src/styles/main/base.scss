@@ -1,1 +1,123 @@
 // Базовый файл стилей
+
+.main {
+	position: relative;
+
+	&__offer {
+		margin-top: -250px;
+		border-radius: 50px;
+	}
+
+	&__title {
+		line-height: 1.1;
+	}
+}
+
+.help-you {
+	position: relative;
+
+	&__img {
+		max-height: 600px;
+	}
+
+	&__offer {
+		border-radius: 50px;
+	}
+}
+
+.problems {
+	position: relative;
+
+	&__dot {
+		flex-shrink: 0;
+		width: 24px;
+		margin-right: 24px;
+		background-color: $secondary;
+		border-radius: 100%;
+		aspect-ratio: 1;
+	}
+}
+
+.reason {
+	position: relative;
+
+	&__offer {
+		margin-top: -200px;
+		border-radius: 50px;
+	}
+
+	&__card {
+		background: $secondary-light;
+	}
+}
+
+.steps {
+	position: relative;
+
+	&__item {
+		position: relative;
+		border-radius: 24px;
+
+		&::before {
+			position: absolute;
+			top: 0;
+			left: 0;
+			display: block;
+			width: 100%;
+			height: 4px;
+			background-color: $secondary;
+			border-radius: 50px;
+			content: '';
+		}
+
+		&:last-child {
+			content: '';
+
+			&::after {
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				display: block;
+				width: 100%;
+				height: 4px;
+				background-color: $secondary;
+				border-radius: 50px;
+				content: '';
+			}
+		}
+	}
+}
+
+.technology {
+	position: relative;
+
+	&__icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 80px;
+		margin: 20px auto;
+		background: $secondary;
+		border-radius: 100%;
+		aspect-ratio: 1;
+	}
+}
+
+.profit {
+	position: relative;
+
+	&__title {
+		margin-top: -270px;
+	}
+
+	&__number {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		color: $secondary;
+		font-weight: 900;
+		font-size: 250px;
+		line-height: 1;
+		opacity: 0.1;
+	}
+}
