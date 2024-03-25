@@ -1,13 +1,13 @@
-<section class="technology pb-10">
+<section class="technology pb-6 pb-lg-10">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="fs-24 fs-lg-48 text-secondary mb-6">Проверенная технология <br> из 6 консультаций, на которых ты:</h2>
+				<h2 class="fs-24 fs-lg-48 text-secondary mb-45 mb-lg-6">Проверенная технология <br> из 6 консультаций, на которых ты:</h2>
 			</div>
 		</div>
 		<div class="row gx-lg-5 gy-4">
 			{% for tech in site.technology %}
-				<div class="col-4">
+				<div class="col-12 col-md-6 col-lg-4">
 					<div class="technology__card d-flex flex-column justify-content-stretch p-4 rounded-4 shadow h-100">
 						<div class="technology__icon">
 							<img src="{{ tech.img }}" alt="" width="40">

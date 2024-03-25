@@ -1,0 +1,47 @@
+<section class="faq pb-6 pb-lg-10">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<h2 class="fs-24 fs-lg-48">Часто задаваемые вопросы</h2>
+			</div>
+		</div>
+		<div class="row mt-45 mt-lg-6">
+			<div class="col-md-6">
+				<div class="accordion" id="">
+					{% for faq in site.faqOne %}
+						<div class="accordion-item mb-3">
+							<h2 class="accordion-header">
+								<button class="accordion-button collapsed rounded-4 fs-16 fs-lg-24" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse-{{loop.index}}" aria-expanded="false" aria-controls="panelsStayOpen-collapse-{{loop.index}}">
+									{{ faq.title }}
+								</button>
+							</h2>
+							<div id="panelsStayOpen-collapse-{{loop.index}}" class="accordion-collapse collapse">
+								<div class="accordion-body">
+									<p class="fs-16 fs-lg-20 mb-0">{{ faq.desc }}</p>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+			<div class="col-md-6">
+				<div class="accordion" id="">
+					{% for faq in site.faqTwo %}
+						<div class="accordion-item mb-3">
+							<h2 class="accordion-header">
+								<button class="accordion-button collapsed rounded-4 fs-16 fs-lg-24" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapse-2-{{loop.index}}" aria-expanded="false" aria-controls="panelsStayOpen-collapse-2-{{loop.index}}">
+									{{ faq.title }}
+								</button>
+							</h2>
+							<div id="panelsStayOpen-collapse-2-{{loop.index}}" class="accordion-collapse collapse">
+								<div class="accordion-body">
+									<p class="fs-16 fs-lg-20 mb-0">{{ faq.desc }}</p>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

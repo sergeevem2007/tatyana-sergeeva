@@ -1,14 +1,14 @@
-<section class="result pb-10">
+<section class="result pb-6 pb-lg-10">
 	<div class="container">
-		<div class="row mb-6">
+		<div class="row mb-lg-6">
 			<div class="col-12">
-				<h2 class="fs-24 fs-lg-48">Какого результата стоит ожидать</h2>
+				<h2 class="fs-24 fs-lg-48 wow fadeInUp">Какого результата стоит ожидать</h2>
 			</div>
 		</div>
-		<div class="row gx-lg-4 gy-4">
+		<div class="row gx-lg-4 gy-lg-4">
 			{% for result in site.result %}
 				<div class="col-md-6">
-					<div class="p-4 h-100 border-light border-bottom">
+					<div class="pt-0 p-4 h-100 border-light border-bottom wow fadeInUp" data-wow-delay="{{0.5 * loop.index}}s">
 						<div class="d-flex align-items-center">
 							<div class="fw-700 fs-100 text-light">{{ result.number }}</div>
 							<div class="fw-600 fs-24 lh-1 text-uppercase ms-n4">{{ result.title }}</div>

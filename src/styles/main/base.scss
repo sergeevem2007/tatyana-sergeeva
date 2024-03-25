@@ -4,6 +4,12 @@
 	position: relative;
 
 	&__offer {
+		@include media-breakpoint-down(lg) {
+			margin-top: -50px;
+		}
+
+		position: relative;
+		z-index: 2;
 		margin-top: -250px;
 		border-radius: 50px;
 	}
@@ -42,12 +48,16 @@
 	position: relative;
 
 	&__offer {
+		@include media-breakpoint-down(lg) {
+			margin-top: -50px;
+		}
+
 		margin-top: -200px;
 		border-radius: 50px;
 	}
 
 	&__card {
-		background: $secondary-light;
+		background: $secondarylight;
 	}
 }
 
@@ -64,7 +74,7 @@
 			left: 0;
 			display: block;
 			width: 100%;
-			height: 4px;
+			height: 2px;
 			background-color: $secondary;
 			border-radius: 50px;
 			content: '';
@@ -107,6 +117,10 @@
 	position: relative;
 
 	&__title {
+		@include media-breakpoint-down(lg) {
+			margin-top: -50px;
+		}
+
 		margin-top: -270px;
 	}
 
@@ -119,5 +133,64 @@
 		font-size: 250px;
 		line-height: 1;
 		opacity: 0.1;
+	}
+}
+
+.cost {
+	position: relative;
+	overflow: hidden;
+
+	&__bg {
+		@include media-breakpoint-down(lg) {
+			background: $secondarylight;
+			border-radius: 0;
+		}
+
+		background: linear-gradient(90deg, $secondarylight 0%, $secondarylight 50%, $secondary 50%, $secondary 100%);
+
+		border-radius: $border-radius-xl;
+	}
+
+	&__span {
+		background-color: #fff;
+
+		&.active {
+			font-weight: 500;
+		}
+	}
+
+	&__radio {
+		display: none;
+	}
+
+	&__img {
+		@include media-breakpoint-down(lg) {
+			bottom: 25%;
+		}
+
+		position: absolute;
+		right: -16px;
+		bottom: -5%;
+	}
+}
+
+.form-control {
+	position: relative;
+
+	&::placeholder {
+		color: rgba($primary, 0.4);
+	}
+}
+
+.faq {
+	position: relative;
+
+	.accordion-item {
+		border: 1px solid $secondarylight;
+		border-radius: $border-radius-xl;
+	}
+
+	.accordion-button {
+		background-color: $secondarylight;
 	}
 }
