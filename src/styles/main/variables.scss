@@ -75,7 +75,7 @@ $spacers: (
 		(
 			$spacer * 9.375,
 		)
-		// 150px,,,,,,,,,,,,,,,,,,,,
+		// 150px,,,,,,,,,,,,,,,,,,,,,,,,,
 );
 
 // Bootstrap Globals
@@ -112,3 +112,9 @@ $container-max-widths: (
 	xl: 1140px,
 	xxl: 1320px,
 );
+
+$modal-md: 700px;
+
+:root {
+	--swiper-navigation-color: $secondary;
+}

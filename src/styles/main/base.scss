@@ -1,5 +1,22 @@
 // Базовый файл стилей
 
+.header {
+	position: relative;
+
+	&__navbar {
+		@include media-breakpoint-up(lg) {
+			position: static;
+			border-top: none;
+		}
+
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		border-top: 1px solid $light;
+	}
+}
+
 .main {
 	position: relative;
 
@@ -110,6 +127,25 @@
 		background: $secondary;
 		border-radius: 100%;
 		aspect-ratio: 1;
+	}
+
+	&__mockup {
+		position: relative;
+		background: $secondarylight;
+		border-radius: var(--bs-border-radius-xl);
+		border-bottom-left-radius: 0;
+
+		&::before {
+			position: absolute;
+			bottom: -16px;
+			left: 0;
+			width: 16px;
+			height: 16px;
+			border-color: $secondarylight transparent transparent transparent;
+			border-style: solid;
+			border-width: 16px 16px 0 0;
+			content: '';
+		}
 	}
 }
 
@@ -306,5 +342,55 @@
 			font-weight: 900;
 			content: '•';
 		}
+	}
+}
+
+.reviews-slider {
+	position: relative;
+
+	&__img {
+		position: absolute;
+		top: -50px;
+		left: 50%;
+		border: 4px solid #fff;
+		border-radius: 100%;
+		box-shadow: $box-shadow;
+		transform: translateX(-50%);
+	}
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	@include media-breakpoint-down(md) {
+		top: 0;
+		margin-top: 0;
+	}
+
+	z-index: 10;
+	width: 45px;
+	height: 45px;
+	color: $secondary;
+	background: #fff;
+	border-radius: 100%;
+	box-shadow: $box-shadow;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+	font-weight: 900;
+	font-size: 24px;
+}
+
+.privacy-policy {
+	position: relative;
+
+	ol {
+		list-style-type: none;
+		counter-reset: section;
+	}
+
+	li::before {
+		content: counters(section, '.') ' ';
+		counter-increment: section;
 	}
 }

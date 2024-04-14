@@ -15,7 +15,7 @@
 						<p class="fs-16 fs-lg-20 mb-45">{{ tech.desc }}</p>
 
 						<div class="d-flex justify-content-center mt-auto">
-							<a href="" class="btn btn-outline-secondary fw-700 text-primary text-uppercase rounded-pill px-5 py-3">Пример</a>
+							<a href="#{{ tech.idModal }}" data-bs-toggle="modal" data-bs-target="#{{ tech.idModal }}" class="btn btn-outline-secondary fw-700 text-primary text-uppercase rounded-pill px-5 py-3">Пример</a>
 						</div>
 					</div>
 				</div>
@@ -23,3 +23,19 @@
 		</div>
 	</div>
 </section>
+
+{% for tech in site.technology %}
+	<div class="modal" id="{{ tech.idModal }}" tabindex="-1" aria-labelledby="{{ tech.idModal }}Label" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header px-md-45">
+					<h5 class="modal-title">Разбор ситуации на примере клиентки</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body px-md-45">
+					{{ tech.exampleText }}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endfor %}

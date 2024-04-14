@@ -2,6 +2,9 @@ import '@/styles/index.scss';
 import * as bootstrap from 'bootstrap';
 import './helpers/focus-visible';
 import WOW from 'wow.js';
+import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
+import { Fancybox } from '@fancyapps/ui';
 
 document.addEventListener('DOMContentLoaded', () => {
 	new WOW({
@@ -35,3 +38,44 @@ const costRadio = () => {
 };
 
 costRadio();
+
+Swiper.use([Navigation]);
+
+const reviewsSlider = new Swiper('.reviews-slider', {
+	navigation: {
+		enabled: true,
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	// grabCursor: true,
+	loop: true,
+	slidesPerView: 1,
+	spaceBetween: 10,
+	breakpoints: {
+		768 : {
+			slidesPerView: 2,
+			spaceBetween: 20,
+		}
+	}
+});
+
+const diplomsSlider = new Swiper('.diploms-slider', {
+	navigation: {
+		enabled: true,
+		nextEl: '.swiper-button-next',
+		prevEl: '.swiper-button-prev',
+	},
+	// grabCursor: true,
+	loop: true,
+	slidesPerView: 2,
+	spaceBetween: 10,
+	breakpoints: {
+		768 : {
+			slidesPerView: 4,
+			spaceBetween: 20,
+		}
+	}
+});
+
+Fancybox.bind('[data-fancybox]', {
+});

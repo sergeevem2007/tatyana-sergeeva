@@ -1,0 +1,43 @@
+{% extends "templates/layouts/base.twig" %}
+
+{% set title = "Психолог Сергеева Татьяна | Дипломы" %}
+
+{% block content %}
+
+	<section class="diploms py-45 py-lg-6">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="cases-main__bg rounded-4 p-4 p-lg-45">
+						<h1 class="fw-700 fs-32 fs-lg-60 mb-4 wow fadeInUp" data-wow-delay="0.1s">Мои дипломы</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-45 mb-6">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<div class="swiper diploms-slider">
+						<div class="swiper-wrapper">
+							{% for slide in site.diplomsSlider %}
+								<div class="swiper-slide">
+									<a href="{{ slide.img }}" data-fancybox="diploms-gallery">
+										<img src="{{ slide.img }}" alt="" class="img-fluid rounded-4" />
+									</a>
+								</div>
+							{% endfor %}
+						</div>
+
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+{% endblock %}
