@@ -75,7 +75,7 @@ $spacers: (
 		(
 			$spacer * 9.375,
 		)
-		// 150px,,,,,,,,,,,,,,,,,,,,,,,,,
+		// 150px,,,,,,,,,,,,,,,,,,,,,,,,,,,
 );
 
 // Bootstrap Globals
@@ -114,6 +114,9 @@ $container-max-widths: (
 );
 
 $modal-md: 700px;
+
+$dropdown-link-color: $primary;
+$dropdown-border-color: $secondary;
 
 :root {
 	--swiper-navigation-color: $secondary;

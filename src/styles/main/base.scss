@@ -2,19 +2,7 @@
 
 .header {
 	position: relative;
-
-	&__navbar {
-		@include media-breakpoint-up(lg) {
-			position: static;
-			border-top: none;
-		}
-
-		position: absolute;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		border-top: 1px solid $light;
-	}
+	z-index: 100;
 }
 
 .main {
