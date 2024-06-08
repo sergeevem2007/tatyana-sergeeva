@@ -1,5 +1,6 @@
 import '@/styles/index.scss';
 import './helpers/focus-visible';
+import * as bootstrap from 'bootstrap';
 import WOW from 'wow.js';
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';

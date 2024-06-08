@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
-				<h2 class="fs-24 fs-lg-48 text-secondary mb-45 mb-lg-6">Проверенная технология <br> из 12 консультаций, на которых ты:</h2>
+				<h2 class="fs-24 fs-lg-48 text-secondary mb-45 mb-lg-6 wow fadeInUp" data-wow-delay="0.4s">Проверенная технология <br> из 12 консультаций, на которых ты:</h2>
 			</div>
 		</div>
 		<div class="row gx-lg-5 gy-4">
@@ -15,7 +15,7 @@
 						<p class="fs-16 fs-lg-20 mb-45">{{ tech.desc }}</p>
 
 						<div class="d-flex justify-content-center mt-auto">
-							<a href="#{{ tech.idModal }}" data-bs-toggle="modal" data-bs-target="#{{ tech.idModal }}" class="btn btn-outline-secondary fw-700 text-primary text-uppercase rounded-pill px-5 py-3">Пример</a>
+							<button type="button" href="#{{ tech.idModal }}" data-bs-toggle="modal" data-bs-target="#{{ tech.idModal }}" class="btn btn-outline-secondary fw-700 text-primary text-uppercase rounded-pill px-5 py-3">Пример</button>
 						</div>
 					</div>
 				</div>
@@ -25,7 +25,7 @@
 </section>
 
 {% for tech in site.technology %}
-	<div class="modal" id="{{ tech.idModal }}" tabindex="-1" aria-labelledby="{{ tech.idModal }}Label" aria-hidden="true">
+	<div class="modal fade" id="{{ tech.idModal }}" tabindex="-1" aria-labelledby="{{ tech.idModal }}Label" aria-hidden="true">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header px-md-45">

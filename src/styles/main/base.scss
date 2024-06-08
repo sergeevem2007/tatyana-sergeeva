@@ -1,3 +1,4 @@
+/* stylelint-disable at-rule-empty-line-before */
 // Базовый файл стилей
 
 .header {
@@ -237,19 +238,40 @@
 	}
 }
 
+@keyframes rotate-scale {
+	0% {
+		scale: 1;
+		rotate: 0deg;
+	}
+
+	50% {
+		scale: 1.2;
+		rotate: -45deg;
+	}
+
+	100% {
+		scale: 1;
+		rotate: 0deg;
+	}
+}
+
 .cost {
 	position: relative;
 	overflow: hidden;
 
 	&__bg {
-		@include media-breakpoint-down(lg) {
-			background: $secondarylight;
-			border-radius: 0;
+		@include media-breakpoint-down(xl) {
+			position: relative;
+			max-width: 100%;
+			height: auto;
+			margin: 0 auto;
 		}
 
-		background: linear-gradient(90deg, $secondarylight 0%, $secondarylight 50%, $secondary 50%, $secondary 100%);
-
-		border-radius: $border-radius-xl;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: auto;
+		height: 100vh;
 	}
 
 	&__span {
@@ -260,18 +282,27 @@
 		}
 	}
 
-	&__radio {
-		display: none;
+	&__img {
+		position: relative;
+		right: 0;
+		bottom: 100%;
+		animation-name: rotate-scale;
+		animation-duration: 8s;
+		animation-timing-function: linear;
+		animation-iteration-count: infinite;
+		animation-direction: alternate;
+
+		img {
+			@include media-breakpoint-up(lg) {
+				width: 180px;
+			}
+
+			width: 90px;
+		}
 	}
 
-	&__img {
-		@include media-breakpoint-down(lg) {
-			bottom: 40%;
-		}
-
-		position: absolute;
-		right: -16px;
-		bottom: -5%;
+	&__radio {
+		display: none;
 	}
 }
 
