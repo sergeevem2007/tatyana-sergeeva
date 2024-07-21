@@ -1,0 +1,257 @@
+{% extends "templates/layouts/base-course.twig" %}
+
+{% set title = "Психолог Сергеева Татьяна | Курс" %}
+
+{% block content %}
+	<div class="page-course">
+		<section class="main min-vh-100 pb-lg-10">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 offset-md-1">
+						<div class="d-flex flex-column align-items-center">
+							<div class="main__author wow fadeInUp">
+								<img src="/src/assets/img/courses/courses-main-2x.png" alt="Сергеева Татьяна" class="img-fluid">
+							</div>
+						</div>
+					</div>
+					<div class="col-md-8">
+						<div class="main__offer bg-white px-3 px-lg-45 py-4 py-lg-45 shadow-sm">
+							<h1 class="main__title fw-700 fs-32 fs-lg-60 mb-3 wow fadeInUp" data-wow-delay="0.5s">Измени отношения с&nbsp;родителями и&nbsp;полюби себя</h1>
+							<p class="fs-16 fs-lg-24 mb-45 wow fadeInUp" data-wow-delay="1s">Отношения с&nbsp;родителями как ключ к&nbsp;счастливой и&nbsp;благополучной жизни</p>
+							<div class="d-flex flex-column align-items-center gap-4">
+								<a href="" class="btn btn-brown fw-700 hover-gray text-white text-uppercase rounded-pill px-5 py-3">Принять участие</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="whom pb-45">
+			<div class="whom__bg">
+				<div class="container">
+					<div class="row">
+						<div class="col-12">
+							<h2 class="fs-24 fs-lg-48 text-white text-center wow fadeInUp" data-wow-delay="0.4s">Этот интенсив подходит всем, кто хочет:</h2>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row mt-n5">
+					<div class="col-12">
+						<div class="swiper whom-slider">
+							<div class="swiper-wrapper">
+								{% for who in site.whom %}
+									<div class="swiper-slide h-auto ">
+										<div class="w-100 h-100">
+											<div class="d-flex flex-column align-items-center rounded-4 p-4 shadow-sm h-100 {{ loop.index is odd ? 'bg-brown' : 'bg-dark-blue' }} ">
+												<img src="/src/assets/img/courses/whom-icon.svg" alt="">
+												<p class="fs-16 fs-lg-20 mt-5 text-white text-center">{{ who }}</p>
+											</div>
+										</div>
+									</div>
+								{% endfor %}
+							</div>
+							<div class="swiper-pagination position-relative mt-3"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="program bg-dark-blue py-45 py-lg-6">
+			<div class="container">
+				<div class="row mb-5">
+					<div class="col-12">
+						<h2 class="fs-24 fs-lg-48 text-white text-center wow fadeInUp" data-wow-delay="0.4s">Программа интенсива</h2>
+					</div>
+				</div>
+				<div class="row gy-3">
+					{% for program in site.program %}
+						<div class="col-12 col-md-6">
+							<div class="d-flex align-items-start rounded-4 py-4 px-3 py-lg-45 gap-3 shadow-sm h-100 bg-white">
+								<img src="/src/assets/img/courses/program-icon.svg" alt="" class="flex-shrink-0 order-2 order-lg-1">
+								<div class="order-1 order-lg-2">
+									<h3 class="fs-20 fs-lg-24">{{ program.subtitle }}</h3>
+									<p class="fs-16 mb-0">{{ program.text }}</p>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+
+		<section class="values py-45 py-lg-6">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="values__bg">
+							<div class="row gy-4">
+								<div class="col-md-6">
+									<h2 class="fs-24 fs-lg-48 text-white wow fadeInUp" data-wow-delay="0.4s">Главная ценность интенсива</h2>
+									<p class="fs-20 text-white">Вы получите инструменты, которые помогут отследить и проработать повторяющиеся жизненные сценарии, которые стоят на пути достижения ваших желаний и целей</p>
+									<p class="fs-20 text-white">Именно от осознания причин твоих действий зависит:</p>
+									<div class="d-flex flex-wrap gap-2 gap-lg-4">
+										<span class="values__item">Здоровье</span>
+										<span class="values__item">Деньги</span>
+										<span class="values__item">Окружение</span>
+										<span class="values__item">Отношения</span>
+										<span class="values__item">Реализация</span>
+										<span class="values__item">Ощущение счастья</span>
+										<span class="values__item">Яркость жизни</span>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<img src="/src/assets/img/courses/values-bg.jpg" alt="Сергеева Татьяна" class="img-fluid rounded-5">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="come overflow-hidden bg-dark-blue min-vh-100 py-45 pt-lg-6 pb-lg-10">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10">
+						<div class="d-flex flex-column align-items-center">
+							<div class="main__author come__author wow fadeInUp">
+								<img src="/src/assets/img/courses/version-bg.png" alt="Сергеева Татьяна" class="img-fluid">
+							</div>
+						</div>
+					</div>
+					<div class="col-md-8 ms-auto">
+						<div class="main__offer bg-white px-3 px-lg-45 py-4 py-lg-45 shadow-sm">
+							<h1 class="main__title fw-700 fs-32 fs-lg-60 mb-3 wow fadeInUp" data-wow-delay="0.5s">Стань лучшей версией себя!</h1>
+							<p class="fs-16 fs-lg-24 mb-45 wow fadeInUp" data-wow-delay="1s">Каждое занятие программы интенсива  направлено на то, чтобы помочь тебе обрести гармонию в отношениях с родителями и самой собой. Присоединяйся к другим участницам и начни путь к более счастливой и полноценной жизни.</p>
+							<div class="d-flex flex-column align-items-center gap-4">
+								<a href="" class="btn btn-brown fw-700 hover-gray text-white text-uppercase rounded-pill px-5 py-3">Принять участие</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="edge pb-45 pt-45 pt-lg-6">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h2 class="fs-24 fs-lg-48 text-center wow fadeInUp" data-wow-delay="0.4s">Преимущества интенсива</h2>
+					</div>
+				</div>
+				<div class="row mt-3 mt-lg-5 gy-2 gy-lg-4">
+					{% for edge in site.edge %}
+						<div class="col-md-6">
+							<div class="w-100 h-100">
+								<div class="d-flex align-items-baseline rounded-4 p-3 p-lg-4 shadow-sm h-100 gap-2 gap-lg-4 {{ loop.index is odd ? 'bg-brown' : 'bg-dark-blue' }} ">
+									<img src="/src/assets/img/courses/edge-icon-{{ edge.icon }}.svg" alt="">
+									<p class="fs-16 fs-lg-20 text-white">{{ edge.text }}</p>
+								</div>
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+
+		<section class="reviews pt-45 pt-lg-6">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<h2 class="fs-24 fs-lg-48 text-center wow fadeInUp" data-wow-delay="0.4s">Отзывы участников интенсива</h2>
+					</div>
+				</div>
+				<div class="row mt-5 align-items-end">
+					<div class="col-md-7">
+						<div class="d-flex align-items-start">
+							<div class="me-2 me-lg-3">
+								<img src="/src/assets/img/courses/qoute-icon.png" alt="" class="reviews__qoute">
+							</div>
+							<div class="swiper courses-reviews-slider">
+								<div class="swiper-wrapper">
+									{% for review in site.coursesReviews %}
+										<div class="swiper-slide h-auto ">
+											<div class="w-100 h-100">
+												<p class="fs-20 fs-lg-24 mt-4">{{ review.name }}</p>
+												<p class="fs-16 fs-lg-20 mt-3">{{ review.text }}</p>
+											</div>
+										</div>
+									{% endfor %}
+								</div>
+								<div class="swiper-pagination position-relative mt-3"></div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-5">
+						<img src="/src/assets/img/courses/reviews-bg.png" alt="" class="img-fluid">
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="cta py-6 py-lg-8 bg-dark-blue">
+			<div class="container">
+				<div class="row gx-md-8">
+					<div class="col-md-6">
+						<h2 class="fs-24 fs-lg-48 text-white wow fadeInUp" data-wow-delay="0.4s">Главная ценность интенсива</h2>
+						<p class="fs-20 text-white">Вы получите инструменты, которые помогут отследить и проработать повторяющиеся жизненные сценарии, которые стоят на пути достижения ваших желаний и целей</p>
+					</div>
+					<div class="col-md-6">
+						<div class="bg-white rounded-5 py-4 px-3 p-lg-45">
+							<form class="form d-flex flex-column gap-4" method="post" novalidate>
+								<div class="form-group">
+									<label for="form-username" class="fw-700 fs-20 fs-lg-24">Имя</label>
+									<input type="text" id="form-username" name="name" class="form-control p-3" placeholder="Ваше имя" required autocomplete="off"/>
+									<div class="form-text text-end"></div>
+								</div>
+								<div class="form-group">
+									<label for="form-phone" class="fw-700 fs-20 fs-lg-24">Телефон</label>
+									<input type="text" id="form-phone" name="phone" class="form-control p-3" placeholder="+7 999 99 99" required autocomplete="off"/>
+									<div class="form-text text-end"></div>
+								</div>
+								<div class="form-check form-group">
+									<input class="form-check-input" type="checkbox" name="user-policy" id="courses-check" checked required>
+									<label class="form-check-label" for="courses-check">
+										Даю согласие на обработку персональных данных. Ознакомиться с
+										<a href="/privacy-policy" class="">Политикой конфидинциальности</a>
+									</label>
+									<div class="form-text text-end"></div>
+								</div>
+								<div class="d-flex flex-column align-items-center gap-4">
+									<button type="submit" class="btn btn-brown fw-700 hover-gray text-white text-uppercase rounded-pill px-5 py-3">Принять участие</a>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<template id="request-response">
+		<div class="modal fade" id="response-modal">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content p-4 p-lg-5 bg-white">
+					<div class="modal-header justify-content-end border-bottom-0">
+						<button type="button" class="btn-close fs-24" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<div class="d-flex flex-column align-items-center justify-content-center">
+							<img src="/assets/img/site/edge-icon-gold.svg" width="90" height="90" alt="">
+						</div>
+						<h3 class="modal-title my-4 text-center text-uppercase fw-bold"></h3>
+						<div class="modal-text text-center opacity-75 px-4 px-md-6"></div>
+						<div class="d-flex flex-column align-items-center gap-4">
+							<a href="" target="_blank" id="modal-start" class="btn btn-brown fw-700 hover-gray text-white text-uppercase rounded-pill px-5 py-3">Начать интенсив</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</template>
+
+</div>{% endblock %}
